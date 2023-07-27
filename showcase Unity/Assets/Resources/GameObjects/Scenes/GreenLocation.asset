@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bf0730aa098264db3e44ae6b3c1df2, type: 3}
-  m_Name: EntityCreatorManager
+  m_Script: {fileID: 11500000, guid: d904142c53529d4468f6af48d2bd03d6, type: 3}
+  m_Name: GreenLocation
   m_EditorClassIdentifier: 
-  _pool3dObjects: []
+  _name: GreenLocation
+  _description: Location with green background picture
+  _picture: {fileID: 21300000, guid: 5f9cc2cbe01b55f4381d388fd7e3fb2f, type: 3}
+  _sceneID: 2

@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bf0730aa098264db3e44ae6b3c1df2, type: 3}
-  m_Name: EntityCreatorManager
+  m_Script: {fileID: 11500000, guid: 66109370e7325964ab3d8fb0f0a12f3a, type: 3}
+  m_Name: LoadSceneManager
   m_EditorClassIdentifier: 
-  _pool3dObjects: []

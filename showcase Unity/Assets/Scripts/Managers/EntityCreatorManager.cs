@@ -1,14 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro.EditorUtilities;
 using UnityEngine;
 [CreateAssetMenu(fileName = "New EntityCreatorManager", menuName = "EntityCreator Manager")]
 public class EntityCreatorManager : ScriptableObject
 {
-    private List<GameObject> _pool3dObjects = new List<GameObject>();
+    [SerializeField]private List<GameObject> _pool3dObjects = new List<GameObject>();
     
-    public GameObject CreateObject(string Id, GameObject Prefab,Vector3 position, Quaternion rotation)
+    public void CreateObject(string Id, GameObject Prefab,Vector3 position, Quaternion rotation)
     {
         if (_pool3dObjects.Count>0)
         {
@@ -23,7 +21,7 @@ public class EntityCreatorManager : ScriptableObject
         if (instance)
         {
             instance.SetActive(true);
-            return null;
+            return;
         }
             
         //if not in the pool - instantiate and add to the pool
@@ -34,6 +32,6 @@ public class EntityCreatorManager : ScriptableObject
                 
         _pool3dObjects.Add(newInstace);
             
-        return null;
+        return;
     }
 }

@@ -52,7 +52,6 @@ public class CharactersDataPanelManager : MonoBehaviour,IDataManager
     }
     public void MoveNext()
     {
-        
         if (_index<_charactersIdAll.Count-1)
         {
             _index++;
