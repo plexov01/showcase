@@ -4,7 +4,7 @@ using UnityEngine;
 
 interface IDataManager
 {
-    public void showObject(string Id);
+    public void showObject(string id);
     public void MoveNext();
     public void MovePrevious();
 }

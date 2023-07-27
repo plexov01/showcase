@@ -14,13 +14,13 @@ public class Character : ScriptableObject
     
     public GameObject Prefab;
     
-    public void CreateCharacter(string Id, string Name,int Level, Sprite Avatar, GameObject Prefab)
+    public void CreateCharacter(string id, string name, int level, Sprite avatar, GameObject prefab)
     {
-        this.Id = Id;
-        this.Name = Name;
-        this.Level = Level;
-        this.Avatar = Avatar;
-        this.Prefab = Prefab;
+        this.Id = id;
+        this.Name = name;
+        this.Level = level;
+        this.Avatar = avatar;
+        this.Prefab = prefab;
         
     }
 }

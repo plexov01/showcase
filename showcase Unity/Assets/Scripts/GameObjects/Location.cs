@@ -12,12 +12,12 @@ public class Location : ScriptableObject
     
     public int SceneId;
 
-    public void CreateLocation(string Name, string Description, Sprite Picture, int SceneId)
+    public void CreateLocation(string name, string description, Sprite picture, int sceneId)
     {
-        this.Name = Name;
-        this.Description = Description;
-        this.Picture = Picture;
-        this.SceneId = SceneId;
+        this.Name = name;
+        this.Description = description;
+        this.Picture = picture;
+        this.SceneId = sceneId;
         
     }
 

@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "New LoadSceneManager", menuName = "LoadScene Manager ")]
 public class LoadSceneManager : ScriptableObject
 {
-    public void LoadSceneByName(string Name)
+    public void LoadSceneByName(string name)
     {
-        SceneManager.LoadScene(Name);
+        SceneManager.LoadScene(name);
     }
 
 }

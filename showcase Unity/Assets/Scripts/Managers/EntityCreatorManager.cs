@@ -4,9 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New EntityCreatorManager", menuName = "EntityCreator Manager")]
 public class EntityCreatorManager : ScriptableObject
 {
-    [SerializeField]private List<GameObject> _pool3dObjects = new List<GameObject>();
-    
-    public void CreateObject(string Id, GameObject Prefab,Vector3 position, Quaternion rotation)
+    [SerializeField] private List<GameObject> _pool3dObjects = new List<GameObject>();
+    public void CreateObject(string id, GameObject prefab,Vector3 position, Quaternion rotation)
     {
         if (_pool3dObjects.Count>0)
         {
@@ -16,7 +15,7 @@ public class EntityCreatorManager : ScriptableObject
             }
         }
         //checking object in pool
-        var instance = _pool3dObjects.FirstOrDefault(obj => obj.name == Id);
+        var instance = _pool3dObjects.FirstOrDefault(obj => obj.name == id);
         
         if (instance)
         {
@@ -25,10 +24,10 @@ public class EntityCreatorManager : ScriptableObject
         }
             
         //if not in the pool - instantiate and add to the pool
-        GameObject newInstace = Instantiate(Prefab, position, rotation);
+        GameObject newInstace = Instantiate(prefab, position, rotation);
                 
         newInstace.transform.localPosition = Vector3.zero;
-        newInstace.name = Id;
+        newInstace.name = id;
                 
         _pool3dObjects.Add(newInstace);
         
