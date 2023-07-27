@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d904142c53529d4468f6af48d2bd03d6, type: 3}
   m_Name: RedLocation
   m_EditorClassIdentifier: 
-  _name: RedLocation
-  _description: Location with red background picture
-  _picture: {fileID: 21300000, guid: 67fd6011b6712d547b84068a908ccaae, type: 3}
-  _sceneID: 3
+  Name: RedLocation
+  Description: Scene with red color
+  Picture: {fileID: 21300000, guid: 67fd6011b6712d547b84068a908ccaae, type: 3}
+  SceneId: 3

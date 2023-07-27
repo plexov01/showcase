@@ -4,34 +4,23 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Name_Character", menuName = "Character")]
 public class Character : ScriptableObject
 {
-    [SerializeField] private string _id;
+    public string Id;
     
-    [SerializeField] private string _name;
+    public string Name;
     
-    [SerializeField] private int _level;
+    public int Level;
     
-    [SerializeField] private Sprite _avatar;
+    public Sprite Avatar;
     
-    [SerializeField] private GameObject _prefab;
+    public GameObject Prefab;
     
-    public string Id
+    public void CreateCharacter(string Id, string Name,int Level, Sprite Avatar, GameObject Prefab)
     {
-        get { return _id; }
-    }
-    public string Name
-    {
-        get { return _name; }
-    }
-    public int Level
-    {
-        get { return _level; }
-    }
-    public Sprite Avatar
-    {
-        get { return _avatar; }
-    }
-    public GameObject Prefab
-    {
-        get { return _prefab; }
+        this.Id = Id;
+        this.Name = Name;
+        this.Level = Level;
+        this.Avatar = Avatar;
+        this.Prefab = Prefab;
+        
     }
 }

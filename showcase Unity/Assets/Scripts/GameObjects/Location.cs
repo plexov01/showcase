@@ -4,31 +4,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NameLocation", menuName = "Location")]
 public class Location : ScriptableObject
 {
-    [SerializeField] private string _name;
+    public string Name;
     
-    [SerializeField] private string _description;
+    public string Description;
     
-    [SerializeField] private Sprite _picture;
+    public Sprite Picture;
     
-    [SerializeField] private int _sceneID;
-    
-    public string Name
+    public int SceneId;
+
+    public void CreateLocation(string Name, string Description, Sprite Picture, int SceneId)
     {
-        get { return _name; }
-    }
-    public string Description
-    {
-        get { return _description; }
-    }
-    public Sprite Picture
-    {
-        get { return _picture; }
+        this.Name = Name;
+        this.Description = Description;
+        this.Picture = Picture;
+        this.SceneId = SceneId;
+        
     }
 
-    public int SceneId
-    {
-        get {
-            return _sceneID;
-        }
-    }
 }

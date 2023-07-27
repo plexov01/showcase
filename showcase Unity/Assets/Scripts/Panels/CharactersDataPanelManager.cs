@@ -16,6 +16,7 @@ public class CharactersDataPanelManager : MonoBehaviour,IDataManager
     [SerializeField] private List<string> _charactersIdAll;
     
     [SerializeField] private EntityCreatorManager _entityCreatorManager;
+    [SerializeField] private Character _currentSelectedCharacter;
     
     private TMP_Text _textNameCharacter;
     private TMP_Text _textLevelCharacter;
@@ -49,6 +50,12 @@ public class CharactersDataPanelManager : MonoBehaviour,IDataManager
     public void ButtonChoose()
     {
         Debug.Log("Was chosen - " + _containerWithSelectedCharacter.Name);
+        _currentSelectedCharacter.CreateCharacter(_containerWithSelectedCharacter.Id,
+            _containerWithSelectedCharacter.Name,
+            _containerWithSelectedCharacter.Level,
+            _containerWithSelectedCharacter.Avatar,
+            _containerWithSelectedCharacter.Prefab);
+ 
     }
     public void MoveNext()
     {

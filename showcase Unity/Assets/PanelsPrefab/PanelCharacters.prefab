@@ -987,6 +987,7 @@ MonoBehaviour:
   - LittleCube_Character
   - Cube_Character
   _entityCreatorManager: {fileID: 11400000, guid: 013d47f617be7674e9e3dc0a5ab5cbe1, type: 2}
+  _currentSelectedCharacter: {fileID: 11400000, guid: e6307dcb1ece01345bb4cb1ff8f5c4e2, type: 2}
 --- !u!1 &4427812304986047552
 GameObject:
   m_ObjectHideFlags: 0

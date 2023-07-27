@@ -14,6 +14,8 @@ public class LocationDataPanelManager : MonoBehaviour, IDataManager
     [SerializeField] private List<string> _LocationsIdAll;
     
     [SerializeField] private LoadSceneManager _loadSceneManager;
+    
+    [SerializeField] private Location _currentSelectedLocation;
 
     private TMP_Text _textNameLocation;
     private TMP_Text _textDescriptionOfLocation;
@@ -48,6 +50,7 @@ public class LocationDataPanelManager : MonoBehaviour, IDataManager
 
     public void ButtonChoose()
     {
+        _currentSelectedLocation.CreateLocation(_containerWithSelectedLocation.Name,_containerWithSelectedLocation.Description,_containerWithSelectedLocation.Picture,_containerWithSelectedLocation.SceneId);
         _loadSceneManager.LoadSceneByName(_containerWithSelectedLocation.Name);
     }
 

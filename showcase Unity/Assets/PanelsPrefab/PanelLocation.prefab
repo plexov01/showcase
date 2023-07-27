@@ -912,6 +912,7 @@ MonoBehaviour:
   - RedLocation
   - GreenLocation
   _loadSceneManager: {fileID: 11400000, guid: 6b4a945a424f7874395d35517213e89a, type: 2}
+  _currentSelectedLocation: {fileID: 11400000, guid: f8d2a6caa163aed498f57bccfd8a7aab, type: 2}
 --- !u!1 &3845251280319533502
 GameObject:
   m_ObjectHideFlags: 0
