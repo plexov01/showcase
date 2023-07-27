@@ -31,7 +31,6 @@ public class EntityCreatorManager : ScriptableObject
         newInstace.name = Id;
                 
         _pool3dObjects.Add(newInstace);
-            
-        return;
+        
     }
 }
