@@ -228,14 +228,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984689272649649990}
   - component: {fileID: 3613441641064623189}
-  - component: {fileID: 2719509839575257292}
+  - component: {fileID: 4046345415931226760}
   m_Layer: 5
   m_Name: Image3DObject
   m_TagString: Untagged
@@ -316,7 +316,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089016950248831872}
   m_CullTransparentMesh: 1
---- !u!114 &2719509839575257292
+--- !u!114 &4046345415931226760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2089016950248831872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -336,16 +336,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Texture: {fileID: 8400000, guid: 426800d0c67768c4186751520377cb22, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &2123283791827813536
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3918359823989550395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8801822436672798746}
+        m_TargetAssemblyTypeName: CharactersDataManager, Assembly-CSharp
+        m_MethodName: MovePrevious
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2820143331007284922
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +893,7 @@ GameObject:
   - component: {fileID: 989992165937798985}
   - component: {fileID: 6321143793660548123}
   - component: {fileID: 1460947750890897634}
+  - component: {fileID: 8801822436672798746}
   m_Layer: 5
   m_Name: PanelCharacters
   m_TagString: Untagged
@@ -957,6 +967,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8801822436672798746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231104300363514306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b2c3e3a60fd91488adb9bae2fda461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjectNameCharacter: {fileID: 423830781290793808}
+  _gameObjectLevelCharacter: {fileID: 7327237729416989237}
+  _image2DAvatar: {fileID: 5117699655307746090}
+  _charactersIdAll:
+  - Ball_Character
+  - LittleCube_Character
+  - Cube_Character
+  _entityCreatorManager: {fileID: 11400000, guid: 013d47f617be7674e9e3dc0a5ab5cbe1, type: 2}
 --- !u!1 &4427812304986047552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1157,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -500, y: 0}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2397991506098285939
 CanvasRenderer:
@@ -1260,14 +1290,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1423,7 +1453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4860956604649078599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8801822436672798746}
+        m_TargetAssemblyTypeName: CharactersDataManager, Assembly-CSharp
+        m_MethodName: ButtonChoose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8169281033656161574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,4 +1587,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2575615924080856023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8801822436672798746}
+        m_TargetAssemblyTypeName: CharactersDataManager, Assembly-CSharp
+        m_MethodName: MoveNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

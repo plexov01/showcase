@@ -13,7 +13,7 @@ public class ObjectPool : ScriptableObject
    
    private GameObject _poolForObjects;
    
-   public GameEvent PoolForObjectsGot;
+   public GameEvent PoolForPanelsGot;
    
    public void GetPoolForObjects(GameObject poolForObjects)
    {
@@ -38,7 +38,7 @@ public class ObjectPool : ScriptableObject
       if (prefab != null)
       {
          // Get the GameObject in Canvas
-         PoolForObjectsGot.Raise();
+         PoolForPanelsGot.Raise();
 
          // Create a new instance
          GameObject newInstace = Instantiate(prefab, Vector3.zero, Quaternion.identity,_poolForObjects.transform);

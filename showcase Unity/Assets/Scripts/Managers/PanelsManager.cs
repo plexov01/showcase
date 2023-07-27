@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New PanelManager", menuName = "Panel Manager")]
-public class PanelManager : ScriptableObject
+[CreateAssetMenu(fileName = "New PanelManager", menuName = "Panels Manager")]
+public class PanelsManager : ScriptableObject
 {
     // for hold all of instances
     [SerializeField] private List<PanelInstanceModel> _panelInstanceModels = new List<PanelInstanceModel>();

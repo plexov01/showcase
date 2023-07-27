@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 982550d7b738e8444a8e75738a4fe8e4, type: 3}
-  m_Name: Event_PoolForObjectsGot
+  m_Script: {fileID: 11500000, guid: 55bf0730aa098264db3e44ae6b3c1df2, type: 3}
+  m_Name: EntityCreatorManager
   m_EditorClassIdentifier: 
