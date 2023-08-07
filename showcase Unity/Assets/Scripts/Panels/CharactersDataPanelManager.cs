@@ -32,10 +32,10 @@ public class CharactersDataPanelManager : MonoBehaviour,IDataManager
         showObject(_charactersIdAll[_index]);
     }
 
-    public void showObject(string Id)
+    public void showObject(string id)
     {
         // load character from Resources
-        _containerWithSelectedCharacter = Resources.Load<Character>("GameObjects/Characters/" + Id);
+        _containerWithSelectedCharacter = Resources.Load<Character>("GameObjects/Characters/" + id);
         
         // assign character data to elements
         _textNameCharacter.text = _containerWithSelectedCharacter.Name;
