@@ -1,25 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Game Event", menuName = "Game Event", order = 52)] // 1
-public class GameEvent : ScriptableObject // 2
+[CreateAssetMenu(fileName = "New Game Event", menuName = "Game Event", order = 52)] 
+public class GameEvent : ScriptableObject 
 {
-    private List<GameEventListener> _listeners = new List<GameEventListener>(); // 3
+    private List<GameEventListener> _listeners = new List<GameEventListener>(); 
 
-    public void Raise() // 4
+    public void Raise() 
     {
-        for (int i = _listeners.Count - 1; i >= 0; i--) // 5
+        for (int i = _listeners.Count - 1; i >= 0; i--) 
         {
-            _listeners[i].OnEventRaised(); // 6
+            _listeners[i].OnEventRaised(); 
         }
     }
 
-    public void RegisterListener(GameEventListener listener) // 7
+    public void RegisterListener(GameEventListener listener) 
     {
         _listeners.Add(listener);
     }
 
-    public void UnregisterListener(GameEventListener listener) // 8
+    public void UnregisterListener(GameEventListener listener) 
     {
         _listeners.Remove(listener);
     }

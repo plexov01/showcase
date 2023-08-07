@@ -8,39 +8,35 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharactersDataPanelManager : MonoBehaviour,IDataManager
+public class CharactersPanelManager : PanelManager,IPanelManager
 {
-    [SerializeField] private GameObject _gameObjectNameCharacter;
     [SerializeField] private GameObject _gameObjectLevelCharacter;
-    [SerializeField] private Image _image2DAvatar;
-    [SerializeField] private List<string> _charactersIdAll;
-    
+
     [SerializeField] private EntityCreatorManager _entityCreatorManager;
-    [SerializeField] private Character _currentSelectedCharacter;
-    
+
     private TMP_Text _textNameCharacter;
     private TMP_Text _textLevelCharacter;
-    
-    private int _index;
-    
+
     private Character _containerWithSelectedCharacter;
+    [SerializeField] private CharactersDataManager _charactersDataManager;
     private void Start()
     {
-        _textNameCharacter = _gameObjectNameCharacter.GetComponent<TMP_Text>();
+        _textNameCharacter = _gameObjectName.GetComponent<TMP_Text>();
         _textLevelCharacter = _gameObjectLevelCharacter.GetComponent<TMP_Text>();
         
-        showObject(_charactersIdAll[_index]);
+        showObject(_charactersDataManager.GetCurrentObjectString());
+        
     }
 
     public void showObject(string id)
     {
         // load character from Resources
         _containerWithSelectedCharacter = Resources.Load<Character>("GameObjects/Characters/" + id);
-        
+
         // assign character data to elements
         _textNameCharacter.text = _containerWithSelectedCharacter.Name;
-        _textLevelCharacter.text = "level: " + _containerWithSelectedCharacter.Level.ToString();
-        _image2DAvatar.sprite = _containerWithSelectedCharacter.Avatar;
+        _textLevelCharacter.text = "level: " + _containerWithSelectedCharacter.Level;
+        _imageObject2D.sprite = _containerWithSelectedCharacter.ObjectSprite;
 
         _entityCreatorManager.CreateObject(_containerWithSelectedCharacter.Id, _containerWithSelectedCharacter.Prefab,
             Vector3.zero, Quaternion.identity);
@@ -50,30 +46,19 @@ public class CharactersDataPanelManager : MonoBehaviour,IDataManager
     public void ButtonChoose()
     {
         Debug.Log("Was chosen - " + _containerWithSelectedCharacter.Name);
-        _currentSelectedCharacter.CreateCharacter(_containerWithSelectedCharacter.Id,
-            _containerWithSelectedCharacter.Name,
-            _containerWithSelectedCharacter.Level,
-            _containerWithSelectedCharacter.Avatar,
-            _containerWithSelectedCharacter.Prefab);
- 
+        _charactersDataManager.SetDataСontainer(_containerWithSelectedCharacter);
+
     }
     public void MoveNext()
     {
-        if (_index<_charactersIdAll.Count-1)
-        {
-            _index++;
-        }
+        _charactersDataManager.IncreaseIndex();
 
-        showObject(_charactersIdAll[_index]);
+        showObject(_charactersDataManager.GetCurrentObjectString());
     }
     public void MovePrevious()
     {
-        if (_index>0)
-        {
-            _index--;
-        }
-        
-        showObject(_charactersIdAll[_index]);
+        _charactersDataManager.DecreaseIndex();
+        showObject(_charactersDataManager.GetCurrentObjectString());
     }
     
 }

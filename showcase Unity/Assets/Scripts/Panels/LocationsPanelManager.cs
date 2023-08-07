@@ -4,73 +4,58 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LocationDataPanelManager : MonoBehaviour, IDataManager 
+public class LocationsPanelManager : PanelManager, IPanelManager 
 {
-    [SerializeField] private GameObject _gameObjectNameLocation;
     [SerializeField] private GameObject _gameObjectLevelLocation;
-    [SerializeField] private Image _image2DPicture;
     [SerializeField] private GameObject _gameObjectIdLocation;
-    
-    [SerializeField] private List<string> _LocationsIdAll;
-    
+
     [SerializeField] private LoadSceneManager _loadSceneManager;
-    
-    [SerializeField] private Location _currentSelectedLocation;
 
     private TMP_Text _textNameLocation;
     private TMP_Text _textDescriptionOfLocation;
     private TMP_Text _textIdLocation;
-    
-    private int _index;
-    
+
     private Location _containerWithSelectedLocation;
+    [SerializeField] private LocationsDataManager _locationsDataManager;
 
     void Start()
     {
-        _textNameLocation = _gameObjectNameLocation.GetComponent<TMP_Text>();
+        _textNameLocation = _gameObjectName.GetComponent<TMP_Text>();
         _textDescriptionOfLocation = _gameObjectLevelLocation.GetComponent<TMP_Text>();
         _textIdLocation = _gameObjectIdLocation.GetComponent<TMP_Text>();
-
-        showObject(_LocationsIdAll[_index]);
+        
+        showObject(_locationsDataManager.GetCurrentObjectString());
         
     }
 
-    public void showObject(string Id)
+    public void showObject(string id)
     {
         // load location from Resources
-        _containerWithSelectedLocation = Resources.Load<Location>("GameObjects/Scenes/" + Id);
+        _containerWithSelectedLocation = Resources.Load<Location>("GameObjects/Scenes/" + id);
         
         // assign location data to elements
         _textNameLocation.text = _containerWithSelectedLocation.Name;
         _textDescriptionOfLocation.text = _containerWithSelectedLocation.Description;
-        _image2DPicture.sprite = _containerWithSelectedLocation.Picture;
+        _imageObject2D.sprite = _containerWithSelectedLocation.ObjectSprite;
         _textIdLocation.text = "Id Scene: " + _containerWithSelectedLocation.SceneId;
         
     }
 
     public void ButtonChoose()
     {
-        _currentSelectedLocation.CreateLocation(_containerWithSelectedLocation.Name,_containerWithSelectedLocation.Description,_containerWithSelectedLocation.Picture,_containerWithSelectedLocation.SceneId);
         _loadSceneManager.LoadSceneByName(_containerWithSelectedLocation.Name);
+        _locationsDataManager.SetDataСontainer(_containerWithSelectedLocation);
     }
 
     public void MoveNext()
     {
-        if (_index<_LocationsIdAll.Count-1)
-        {
-            _index++;
-        }
-
-        showObject(_LocationsIdAll[_index]);
+        _locationsDataManager.IncreaseIndex();
+        showObject(_locationsDataManager.GetCurrentObjectString());
     }
 
     public void MovePrevious()
     {
-        if (_index>0)
-        {
-            _index--;
-        }
-        
-        showObject(_LocationsIdAll[_index]);
+        _locationsDataManager.DecreaseIndex();
+        showObject(_locationsDataManager.GetCurrentObjectString());
     }
 }

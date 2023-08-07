@@ -37,7 +37,7 @@ public class PanelsManager : ScriptableObject
                 PanelId = panelId,
                 PanelInstance = panelInstance
             });
-            
+
         }
         else
         {

@@ -903,16 +903,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffa99c572e5081449dbaf01b41b070b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObjectNameLocation: {fileID: 2620231641751439234}
+  _gameObjectName: {fileID: 2620231641751439234}
+  _imageObject2D: {fileID: 6897195753035309998}
   _gameObjectLevelLocation: {fileID: 9105798329221947761}
-  _image2DPicture: {fileID: 6897195753035309998}
   _gameObjectIdLocation: {fileID: 4632799570734248071}
-  _LocationsIdAll:
-  - GrayLocation
-  - RedLocation
-  - GreenLocation
   _loadSceneManager: {fileID: 11400000, guid: 6b4a945a424f7874395d35517213e89a, type: 2}
-  _currentSelectedLocation: {fileID: 11400000, guid: f8d2a6caa163aed498f57bccfd8a7aab, type: 2}
+  _locationsDataManager: {fileID: 11400000, guid: 7363af5ecffb09943b6df01ea1c28109, type: 2}
 --- !u!1 &3845251280319533502
 GameObject:
   m_ObjectHideFlags: 0

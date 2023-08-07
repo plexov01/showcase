@@ -979,15 +979,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b2c3e3a60fd91488adb9bae2fda461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObjectNameCharacter: {fileID: 423830781290793808}
+  _gameObjectName: {fileID: 423830781290793808}
+  _imageObject2D: {fileID: 5117699655307746090}
   _gameObjectLevelCharacter: {fileID: 7327237729416989237}
-  _image2DAvatar: {fileID: 5117699655307746090}
-  _charactersIdAll:
-  - Ball_Character
-  - LittleCube_Character
-  - Cube_Character
   _entityCreatorManager: {fileID: 11400000, guid: 013d47f617be7674e9e3dc0a5ab5cbe1, type: 2}
-  _currentSelectedCharacter: {fileID: 11400000, guid: e6307dcb1ece01345bb4cb1ff8f5c4e2, type: 2}
+  _charactersDataManager: {fileID: 11400000, guid: 3939218587e69b748a932fc5667e9aa1, type: 2}
 --- !u!1 &4427812304986047552
 GameObject:
   m_ObjectHideFlags: 0

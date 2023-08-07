@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IDataManager
+interface IDataManager<T>
 {
-    public void showObject(string id);
-    public void MoveNext();
-    public void MovePrevious();
+    public T GetDataСontainer();
+    public void SetDataСontainer(T container);
+    public string GetObjectStringIdByIndex(int index);
 }
+

@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New ObjectPool", menuName = "Object Pool")]
 public class ObjectPool : ScriptableObject
 {
-   /// List of the objects to be pooled
+   // List of the objects to be pooled
    public List<GameObject> PrefabsForPool;
    
-   /// List of the pooled objects
+   // List of the pooled objects
    [SerializeField] private List<GameObject> _pooledObjects = new List<GameObject>();
    
    private GameObject _poolForObjects;

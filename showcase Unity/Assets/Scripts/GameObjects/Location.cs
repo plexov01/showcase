@@ -1,24 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 [CreateAssetMenu(fileName = "NameLocation", menuName = "Location")]
-public class Location : ScriptableObject
+public class Location : SelectableObject
 {
-    public string Name;
+    [SerializeField] private string _description;
     
-    public string Description;
-    
-    public Sprite Picture;
-    
-    public int SceneId;
-
-    public void CreateLocation(string name, string description, Sprite picture, int sceneId)
+    [SerializeField] private int _sceneId;
+    public string Description
     {
-        this.Name = name;
-        this.Description = description;
-        this.Picture = picture;
-        this.SceneId = sceneId;
-        
+        get => _description;
+        set => _description = value; 
     }
-
+    public int SceneId
+    {
+        get => _sceneId;
+        set => _sceneId = value; 
+    }
 }
