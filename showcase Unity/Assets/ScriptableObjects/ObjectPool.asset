@@ -16,5 +16,3 @@ MonoBehaviour:
   - {fileID: 4231104300363514306, guid: 3edf9df91b7959845bfdcdc38fae032b, type: 3}
   - {fileID: 8837681993392741432, guid: 6b619b40f45530c428a0423cd22cb10c, type: 3}
   - {fileID: 3747336194620078105, guid: 6fa2cfa5d6a3c9541a6599e7d93dff12, type: 3}
-  _pooledObjects: []
-  PoolForPanelsGot: {fileID: 11400000, guid: 4f17e4da59eeed34ea20999ffa84e44d, type: 2}

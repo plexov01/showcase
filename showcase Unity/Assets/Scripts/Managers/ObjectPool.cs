@@ -9,11 +9,10 @@ public class ObjectPool : ScriptableObject
    public List<GameObject> PrefabsForPool;
    
    // List of the pooled objects
-   [SerializeField] private List<GameObject> _pooledObjects = new List<GameObject>();
+   private List<GameObject> _pooledObjects = new List<GameObject>();
    
    private GameObject _poolForObjects;
    
-   public GameEvent PoolForPanelsGot;
    
    public void GetPoolForObjects(GameObject poolForObjects)
    {
@@ -37,8 +36,6 @@ public class ObjectPool : ScriptableObject
       var prefab = PrefabsForPool.FirstOrDefault(obj => obj.name == objectName);
       if (prefab != null)
       {
-         // Get the GameObject in Canvas
-         PoolForPanelsGot.Raise();
 
          // Create a new instance
          GameObject newInstace = Instantiate(prefab, Vector3.zero, Quaternion.identity,_poolForObjects.transform);
@@ -56,6 +53,23 @@ public class ObjectPool : ScriptableObject
       
       Debug.LogWarning("Object pool doesn't have a prefab for the object with name " + objectName);
       return null;
+   }
+   //function will do after scene loading
+   private void CleanPooledObjects()
+   {
+      _pooledObjects.Clear();
+   }
+
+   private void OnEnable()
+   {
+      StartSceneAction.SceneStarted += CleanPooledObjects;
+      PoolForObjectsGotAction.PoolForObjectsGot += GetPoolForObjects;
+   }
+
+   private void OnDisable()
+   {
+      StartSceneAction.SceneStarted -= CleanPooledObjects;
+      PoolForObjectsGotAction.PoolForObjectsGot -= GetPoolForObjects;
    }
    
 }

@@ -56,6 +56,22 @@ public class PanelsManager : ScriptableObject
     {
         return _panelInstanceModels.Count;
     }
+    
+    //function will do after scene loading
+    private void CleanPanelInstanceModels()
+    {
+        _panelInstanceModels.Clear();
+    }
+
+    private void OnEnable()
+    {
+        StartSceneAction.SceneStarted += CleanPanelInstanceModels;
+    }
+
+    private void OnDisable()
+    {
+        StartSceneAction.SceneStarted -= CleanPanelInstanceModels;
+    }
 
 
 }

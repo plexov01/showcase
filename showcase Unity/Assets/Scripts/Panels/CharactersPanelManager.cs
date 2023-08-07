@@ -45,7 +45,6 @@ public class CharactersPanelManager : PanelManager,IPanelManager
 
     public void ButtonChoose()
     {
-        Debug.Log("Was chosen - " + _containerWithSelectedCharacter.Name);
         _charactersDataManager.SetDataСontainer(_containerWithSelectedCharacter);
 
     }
@@ -60,5 +59,5 @@ public class CharactersPanelManager : PanelManager,IPanelManager
         _charactersDataManager.DecreaseIndex();
         showObject(_charactersDataManager.GetCurrentObjectString());
     }
-    
+
 }

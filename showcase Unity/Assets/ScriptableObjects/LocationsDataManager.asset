@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0252b1e7c2947004fa8a7b5402825124, type: 3}
   m_Name: LocationsDataManager
   m_EditorClassIdentifier: 
-  _idAllObjects: []
+  _idAllObjects:
+  - GrayLocation
+  - GreenLocation
+  - RedLocation
+  _containerWithLocation: {fileID: 11400000, guid: 1b379b8ab4f21c04e9e258d76800b24e, type: 2}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -32,4 +33,20 @@ public class EntityCreatorManager : ScriptableObject
         _pool3dObjects.Add(newInstace);
         
     }
+    //function will do after scene loading
+    private void CleanPool3dObjects()
+    {
+        _pool3dObjects.Clear();
+    }
+
+    private void OnEnable()
+    {
+        StartSceneAction.SceneStarted += CleanPool3dObjects;
+    }
+
+    private void OnDisable()
+    {
+        StartSceneAction.SceneStarted -= CleanPool3dObjects;
+    }
+    
 }

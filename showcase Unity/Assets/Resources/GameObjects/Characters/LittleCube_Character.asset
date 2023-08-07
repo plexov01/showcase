@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b594248b742b3d4a95f43e617f1bbc9, type: 3}
   m_Name: LittleCube_Character
   m_EditorClassIdentifier: 
-  Id: LittleCube_Character
-  Name: LittleCube
-  Level: 1
-  Avatar: {fileID: 21300000, guid: 6827ec3786c892049b66f9b505a48e23, type: 3}
-  Prefab: {fileID: 8742245920341947222, guid: 29ec2bf74a22bba438e9ec59a6c3956a, type: 3}
+  _id: LittleCube_Character
+  _name: LittleCube
+  _objectSprite: {fileID: 21300000, guid: 6827ec3786c892049b66f9b505a48e23, type: 3}
+  _level: 1
+  _prefab: {fileID: 8742245920341947222, guid: 29ec2bf74a22bba438e9ec59a6c3956a, type: 3}

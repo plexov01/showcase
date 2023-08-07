@@ -15,7 +15,7 @@ public class LocationsPanelManager : PanelManager, IPanelManager
     private TMP_Text _textDescriptionOfLocation;
     private TMP_Text _textIdLocation;
 
-    private Location _containerWithSelectedLocation;
+    [SerializeField]private Location _containerWithSelectedLocation;
     [SerializeField] private LocationsDataManager _locationsDataManager;
 
     void Start()

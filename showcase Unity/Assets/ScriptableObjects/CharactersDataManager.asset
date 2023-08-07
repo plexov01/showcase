@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae8a8ea3aa2e8f4ba8466b55f8fa7a5, type: 3}
   m_Name: CharactersDataManager
   m_EditorClassIdentifier: 
-  _idAllObjects: []
+  _idAllObjects:
+  - Ball_Character
+  - Cube_Character
+  - LittleCube_Character
+  _containerWithCharacter: {fileID: 11400000, guid: 2c8f0f5124639c9498ebbf51e7d5714c, type: 2}
