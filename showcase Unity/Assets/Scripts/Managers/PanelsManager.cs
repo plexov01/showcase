@@ -6,11 +6,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New PanelManager", menuName = "Panels Manager")]
 public class PanelsManager : ScriptableObject
 {
-    // for hold all of instances
-    [SerializeField] private List<PanelInstanceModel> _panelInstanceModels = new List<PanelInstanceModel>();
-    
     [SerializeField] private ObjectPool _objectPool;
-
+    
+    // for hold all of instances
+    private List<PanelInstanceModel> _panelInstanceModels = new List<PanelInstanceModel>();
     public void ShowPanel(string panelId)
     {
         // Get a panel instance from the ObjectPool

@@ -8,17 +8,17 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharactersPanelManager : PanelManager,IPanelManager
+public class CharactersPanelManager : PanelManager<Character>
 {
     [SerializeField] private GameObject _gameObjectLevelCharacter;
 
     [SerializeField] private EntityCreatorManager _entityCreatorManager;
 
+    [SerializeField] private CharactersDataManager _charactersDataManager;
+    
     private TMP_Text _textNameCharacter;
     private TMP_Text _textLevelCharacter;
 
-    private Character _containerWithSelectedCharacter;
-    [SerializeField] private CharactersDataManager _charactersDataManager;
     private void Start()
     {
         _textNameCharacter = _gameObjectName.GetComponent<TMP_Text>();
@@ -28,33 +28,33 @@ public class CharactersPanelManager : PanelManager,IPanelManager
         
     }
 
-    public void showObject(string id)
+    public override void showObject(string id)
     {
         // load character from Resources
-        _containerWithSelectedCharacter = Resources.Load<Character>("GameObjects/Characters/" + id);
+        _containerWithDataObject = Resources.Load<Character>("GameObjects/Characters/" + id);
 
         // assign character data to elements
-        _textNameCharacter.text = _containerWithSelectedCharacter.Name;
-        _textLevelCharacter.text = "level: " + _containerWithSelectedCharacter.Level;
-        _imageObject2D.sprite = _containerWithSelectedCharacter.ObjectSprite;
+        _textNameCharacter.text = _containerWithDataObject.Name;
+        _textLevelCharacter.text = "level: " + _containerWithDataObject.Level;
+        _imageObject2D.sprite = _containerWithDataObject.ObjectSprite;
 
-        _entityCreatorManager.CreateObject(_containerWithSelectedCharacter.Id, _containerWithSelectedCharacter.Prefab,
+        _entityCreatorManager.CreateObject(_containerWithDataObject.Id, _containerWithDataObject.Prefab,
             Vector3.zero, Quaternion.identity);
         
     }
 
-    public void ButtonChoose()
+    public override void ButtonChoose()
     {
-        _charactersDataManager.SetDataСontainer(_containerWithSelectedCharacter);
+        _charactersDataManager.SetDataСontainer(_containerWithDataObject);
+        Debug.Log("Was choosen character: "+_containerWithDataObject.Name);
 
     }
-    public void MoveNext()
+    public override void MoveNext()
     {
         _charactersDataManager.IncreaseIndex();
-
         showObject(_charactersDataManager.GetCurrentObjectString());
     }
-    public void MovePrevious()
+    public override void MovePrevious()
     {
         _charactersDataManager.DecreaseIndex();
         showObject(_charactersDataManager.GetCurrentObjectString());

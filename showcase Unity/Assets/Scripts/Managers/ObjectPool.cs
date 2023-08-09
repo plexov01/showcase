@@ -6,13 +6,12 @@ using UnityEngine;
 public class ObjectPool : ScriptableObject
 {
    // List of the objects to be pooled
-   public List<GameObject> PrefabsForPool;
+   [SerializeField] private List<GameObject> PrefabsForPool;
    
    // List of the pooled objects
    private List<GameObject> _pooledObjects = new List<GameObject>();
    
    private GameObject _poolForObjects;
-   
    
    public void GetPoolForObjects(GameObject poolForObjects)
    {

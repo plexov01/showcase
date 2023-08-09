@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 795157112}
   - component: {fileID: 795157111}
   - component: {fileID: 795157110}
+  - component: {fileID: 795157113}
   m_Layer: 5
   m_Name: ButtonStart (Button)
   m_TagString: Untagged
@@ -425,31 +426,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 795157111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 243921a03b0dfa847a0360ca501336c1, type: 2}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PanelChoose
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 795157108}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &795157111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +465,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795157108}
   m_CullTransparentMesh: 1
+--- !u!114 &795157113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795157108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 2
+  ButtonId: 
+  hideAfterPress: 1
+  hiddenObject: {fileID: 795157108}
+  switchablePanelName: PanelChoose
 --- !u!1 &846110802
 GameObject:
   m_ObjectHideFlags: 0

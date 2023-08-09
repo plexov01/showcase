@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6855997501359134091}
   - component: {fileID: 2856186490823654783}
   - component: {fileID: 5256912051301771897}
+  - component: {fileID: 2017493679602838147}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -121,19 +122,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2856186490823654783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3819675073897066625}
-        m_TargetAssemblyTypeName: LocationDataPanelManager, Assembly-CSharp
-        m_MethodName: MoveNext
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &2017493679602838147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252170978158694305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 0
+  ButtonId: PanelLocation (LocationsPanelManagers)
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: 
 --- !u!1 &874364719778732778
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +186,7 @@ GameObject:
   - component: {fileID: 433111698781904311}
   - component: {fileID: 7983597954104650661}
   - component: {fileID: 3041656499644726425}
+  - component: {fileID: 724443107143278914}
   m_Layer: 5
   m_Name: ButtonPrevious
   m_TagString: Untagged
@@ -289,19 +296,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7983597954104650661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3819675073897066625}
-        m_TargetAssemblyTypeName: LocationDataPanelManager, Assembly-CSharp
-        m_MethodName: MovePrevious
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &724443107143278914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320713614058547670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 1
+  ButtonId: PanelLocation (LocationsPanelManagers)
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: 
 --- !u!1 &1353746670822761106
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +493,7 @@ GameObject:
   - component: {fileID: 7999829356558533008}
   - component: {fileID: 9090374781455957713}
   - component: {fileID: 3226951775128280770}
+  - component: {fileID: 8223271172929471328}
   m_Layer: 5
   m_Name: ButtonBack
   m_TagString: Untagged
@@ -590,19 +603,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9090374781455957713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 243921a03b0dfa847a0360ca501336c1, type: 2}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PanelChoose
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &8223271172929471328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592474594320654442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 2
+  ButtonId: 
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: PanelChoose
 --- !u!1 &2620231641751439234
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +768,7 @@ GameObject:
   - component: {fileID: 1835961616698347857}
   - component: {fileID: 2715927678789447444}
   - component: {fileID: 6449475922562902607}
+  - component: {fileID: 3674394450672256407}
   m_Layer: 5
   m_Name: ButtonChoose
   m_TagString: Untagged
@@ -859,19 +878,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2715927678789447444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3819675073897066625}
-        m_TargetAssemblyTypeName: LocationDataPanelManager, Assembly-CSharp
-        m_MethodName: ButtonChoose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &3674394450672256407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790996599147879185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 3
+  ButtonId: PanelLocation (LocationsPanelManagers)
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: 
 --- !u!1 &3747336194620078105
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffa99c572e5081449dbaf01b41b070b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ManagerId: PanelLocation (LocationsPanelManagers)
   _gameObjectName: {fileID: 2620231641751439234}
   _imageObject2D: {fileID: 6897195753035309998}
   _gameObjectLevelLocation: {fileID: 9105798329221947761}

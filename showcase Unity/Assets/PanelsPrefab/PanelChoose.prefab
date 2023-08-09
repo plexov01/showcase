@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7356718146597328481}
   - component: {fileID: 8355463012024015053}
   - component: {fileID: 3161456557832776008}
+  - component: {fileID: 9172022085878163205}
   m_Layer: 5
   m_Name: ButtonLocations
   m_TagString: Untagged
@@ -121,19 +122,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8355463012024015053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 243921a03b0dfa847a0360ca501336c1, type: 2}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PanelLocation (LocationsPanelManagers)
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &9172022085878163205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122165993337618304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 2
+  ButtonId: 
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: PanelLocation (LocationsPanelManagers)
 --- !u!1 &6255293417854372459
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +152,7 @@ GameObject:
   - component: {fileID: 4800450778980340232}
   - component: {fileID: 2739910488722725684}
   - component: {fileID: 8272411744164814909}
+  - component: {fileID: 3079932647117642719}
   m_Layer: 5
   m_Name: ButtonCharacters
   m_TagString: Untagged
@@ -255,19 +262,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2739910488722725684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 243921a03b0dfa847a0360ca501336c1, type: 2}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PanelCharacters (CharactersPanelManagers)
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &3079932647117642719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255293417854372459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b281d7ced51a4d843ee2efd7614ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentButtonType: 2
+  ButtonId: 
+  hideAfterPress: 0
+  hiddenObject: {fileID: 0}
+  switchablePanelName: PanelCharacters (CharactersPanelManagers)
 --- !u!1 &6832152883903544971
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PoolForObjectsGotAction : MonoBehaviour
 {
-    //Action shoukd be active after initialization
+    //Action should be active after initialization
     public static Action<GameObject> PoolForObjectsGot;
     private void Start()
     {
