@@ -1,8 +1,11 @@
-interface IPanelManager
+namespace Interfaces
 {
-    public void showObject(string id);
-    public void MoveNext();
-    public void MovePrevious();
-    public void ButtonChoose();
+    interface IPanelManager
+    {
+        public void showObject(string id);
+        public void MoveNext();
+        public void MovePrevious();
+        public void ButtonChoose();
 
+    }
 }

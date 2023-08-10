@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PanelManager<T> : MonoBehaviour,IPanelManager
+public class PanelManager<T> : MonoBehaviour, IPanelManager
 {
     [SerializeField] protected string _ManagerId;
     [SerializeField] protected GameObject _gameObjectName;
