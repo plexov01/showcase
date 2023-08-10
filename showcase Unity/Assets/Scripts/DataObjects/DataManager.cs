@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Interfaces;
 using UnityEngine;
 
-public class DataManager<T> : ScriptableObject,IDataManager<T>
+public class DataManager<T> : ScriptableObject, IDataManager<T>
 {
     [SerializeField] protected List<string> _idAllObjects;
     [SerializeField] protected T _containerWithDataObject;
