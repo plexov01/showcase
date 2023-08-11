@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d904142c53529d4468f6af48d2bd03d6, type: 3}
-  m_Name: GrayLocation
+  m_Script: {fileID: 11500000, guid: 0252b1e7c2947004fa8a7b5402825124, type: 3}
+  m_Name: LocationsDataManager
   m_EditorClassIdentifier: 
-  _id: GrayLocation
-  _name: GrayLocation
-  _objectSprite: {fileID: 21300000, guid: 758735c731e6fd6428ab5b0075e1e544, type: 3}
-  _description: Scene with gray background
-  _sceneId: 1
+  _idAllObjects:
+  - GrayLocation
+  - GreenLocation
+  - RedLocation
+  _containerWithLocation: {fileID: 11400000, guid: 1b379b8ab4f21c04e9e258d76800b24e, type: 2}

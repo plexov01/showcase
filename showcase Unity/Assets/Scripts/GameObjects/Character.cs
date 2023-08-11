@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Name_Character", menuName = "Character")]
-public class Character : ScriptableObject
+public class Character : SelectableObject
 {
-    public string Id;
+    [SerializeField] private int _level;
     
-    public string Name;
-    
-    public int Level;
-    
-    public Sprite Avatar;
-    
-    public GameObject Prefab;
-    
-    public void CreateCharacter(string id, string name, int level, Sprite avatar, GameObject prefab)
+    [SerializeField] private GameObject _prefab;
+    public int Level
     {
-        this.Id = id;
-        this.Name = name;
-        this.Level = level;
-        this.Avatar = avatar;
-        this.Prefab = prefab;
-        
+        get => _level;
+        set => _level = value; 
+    }
+    
+    public GameObject Prefab
+    {
+        get => _prefab;
+        set => _prefab = value; 
     }
 }

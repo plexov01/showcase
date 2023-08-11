@@ -6,11 +6,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New PanelManager", menuName = "Panels Manager")]
 public class PanelsManager : ScriptableObject
 {
-    // for hold all of instances
-    [SerializeField] private List<PanelInstanceModel> _panelInstanceModels = new List<PanelInstanceModel>();
-    
     [SerializeField] private ObjectPool _objectPool;
-
+    
+    // for hold all of instances
+    private List<PanelInstanceModel> _panelInstanceModels = new List<PanelInstanceModel>();
     public void ShowPanel(string panelId)
     {
         // Get a panel instance from the ObjectPool
@@ -37,7 +36,7 @@ public class PanelsManager : ScriptableObject
                 PanelId = panelId,
                 PanelInstance = panelInstance
             });
-            
+
         }
         else
         {
@@ -55,6 +54,22 @@ public class PanelsManager : ScriptableObject
     public int GetAmountPanelsInList()
     {
         return _panelInstanceModels.Count;
+    }
+    
+    //function will do after scene loading
+    private void CleanPanelInstanceModels()
+    {
+        _panelInstanceModels.Clear();
+    }
+
+    private void OnEnable()
+    {
+        StartSceneAction.SceneStarted += CleanPanelInstanceModels;
+    }
+
+    private void OnDisable()
+    {
+        StartSceneAction.SceneStarted -= CleanPanelInstanceModels;
     }
 
 

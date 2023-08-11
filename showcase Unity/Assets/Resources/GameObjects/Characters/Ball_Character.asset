@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b594248b742b3d4a95f43e617f1bbc9, type: 3}
   m_Name: Ball_Character
   m_EditorClassIdentifier: 
-  Id: Ball_Character
-  Name: Ball
-  Level: 2
-  Avatar: {fileID: 21300000, guid: 0302736dc0611464e99a832f41badbdd, type: 3}
-  Prefab: {fileID: 8432817397500537941, guid: 18b07ea8407635b4f9f59af90384265c, type: 3}
+  _id: Ball_Character
+  _name: Ball
+  _objectSprite: {fileID: 21300000, guid: 0302736dc0611464e99a832f41badbdd, type: 3}
+  _level: 5
+  _prefab: {fileID: 8432817397500537941, guid: 18b07ea8407635b4f9f59af90384265c, type: 3}

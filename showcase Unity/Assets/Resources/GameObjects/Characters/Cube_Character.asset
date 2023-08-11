@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b594248b742b3d4a95f43e617f1bbc9, type: 3}
   m_Name: Cube_Character
   m_EditorClassIdentifier: 
-  Id: Cube_Character
-  Name: Cube
-  Level: 5
-  Avatar: {fileID: 21300000, guid: 2579b6f4e0b965d42912008f19d5a7ad, type: 3}
-  Prefab: {fileID: 4981721203208576160, guid: 76b9a491221704849818a5c78071edaf, type: 3}
+  _id: Cube_Character
+  _name: Cube
+  _objectSprite: {fileID: 21300000, guid: 2579b6f4e0b965d42912008f19d5a7ad, type: 3}
+  _level: 10
+  _prefab: {fileID: 4981721203208576160, guid: 76b9a491221704849818a5c78071edaf, type: 3}
